@@ -65,7 +65,7 @@ async function resolveInBatches(promiseArray, batchLength = 10) {
 
 const processReview = (review, remoteId) => {
     const { text, title, rating, tripInfo, publishedDate, userProfile } = review;
-    log.info(review);
+    log.info(JSON.stringify(review));
 
     const stayDate = tripInfo ? tripInfo.stayDate : null;
     let userLocation = null;
